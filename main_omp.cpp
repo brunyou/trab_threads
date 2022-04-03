@@ -43,14 +43,16 @@ cout << "Imprimindo a matriz B: \n";
 print_mat(mat_b);
 
 // multiplicação de matrizes
-for(i = 0; i < 3; i ++){
-    for(j = 0; j < 3; j ++){
-        for(k = 0; k < 3; k++){
-            mat_c[i][j] = mat_c[i][j] + mat_a[i][k] * mat_b [k][j];
+#pragma omp parallel
+{
+    for(i = 0; i < 3; i ++){
+        for(j = 0; j < 3; j ++){
+            for(k = 0; k < 3; k++){
+                mat_c[i][j] = mat_c[i][j] + mat_a[i][k] * mat_b [k][j];
+            }
         }
     }
 }
-
 cout << "Mutiplicando as Matrizes A e B conseguimos:\n";
 print_mat(mat_c);
 
