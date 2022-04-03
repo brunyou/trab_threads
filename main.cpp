@@ -58,6 +58,6 @@ cout << "matriz de cria na real... \n";
 
 
 timedif = ( ((double) clock()) / CLOCKS_PER_SEC) - time1;
-    printf("Tempo executado: %f segundos\n", timedif);
+    printf("Tempo executado: %f segundos em single thread\n", timedif);
 return 0;
 }
