@@ -10,7 +10,6 @@ using namespace std;
 #define SIZE 10
 
 double time1, timedif;// variáveis para o contador
-int v[SIZE]; 
 
 // declarando as matrizes utilizadas
 int mat_a[3][3] = {{1,3,2},{4,1,2},{9,2,3}};
